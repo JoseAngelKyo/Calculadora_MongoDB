@@ -1,0 +1,120 @@
+body {
+    background-color: hsl(240, 70%, 20%);
+}
+
+h1 {
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    
+}
+
+.Cabeza {
+    border: solid white;
+    background-color:gray; 
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.Cuerpo {
+    border: solid white;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.pantalla {
+    width: 380px;
+}
+
+.calculadora {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+div p {
+    flex: 1;
+
+    background-color: white; 
+    color: black;
+
+    text-align: right;
+    font-weight: bolder;
+ 
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    
+    box-shadow: 5px 5px 5px hsl(240, 40%, 20%);
+    transition: box-shadow 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+article p {
+    flex: 1;
+
+    background-color: white; 
+    color: black;
+
+    text-align: center;
+    font-weight: bolder;
+
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 5px hsl(240, 40%, 20%);
+    transition: box-shadow 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.columna-1 {
+    display: flex; 
+    flex-direction: row;
+
+}
+
+.columna-2 {
+    display: flex; 
+    flex-direction: row;
+   
+}
+
+.columna-3 {
+    display: flex; 
+    flex-direction: row;
+    
+}
+
+.columna-4 {
+    display: flex; 
+    flex-direction: row;
+ 
+}
+
+.columna-5 {
+    display: flex; 
+    flex-direction: row;
+}
+
+#DELETE {
+    color: white;
+    background-color: hsl(240, 40%, 20%);
+    border: solid white;
+}
+#RESET{
+    color: white;
+    background-color: hsl(240, 40%, 20%);
+    border: solid white;
+}
+
+#RESULTADO {
+    color: white;
+    background-color: hsl(0, 70%, 30%);
+    border: solid white;
+}
+
