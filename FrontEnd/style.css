@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: hsl(240, 70%, 12%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* TÍTULO H1 GRANDE */
+.app-header h1 {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENEDOR PRINCIPAL (MÁS GRANDE) */
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 950px;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* TITULOS DE SECCIONES CON ICONO */
+.titulo-seccion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.titulo-seccion h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.titulo-seccion svg {
+    stroke: #2ec4b6;
+}
+
+/* CALCULADORA RESTRUCTURADA */
+.calculadora {
+    background-color: hsl(240, 50%, 22%);
+    padding: 30px;
+    border-radius: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pantalla {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: right;
+    min-height: 80px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: auto;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#pantalla-texto {
+    font-size: 40px;
+    font-weight: 800;
+    color: #111;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #111;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 18px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 0px hsl(240, 40%, 15%);
+    transition: transform 0.05s, filter 0.1s;
+}
+
+.btn:hover {
+    filter: brightness(0.9);
+}
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn-accion {
+    background-color: hsl(240, 40%, 35%);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-igual {
+    background-color: hsl(0, 75%, 50%);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-ancho {
+    grid-column: span 2;
+}
+
+/* PANEL HISTORIAL GRANDE */
+.panel-historial {
+    background-color: hsl(240, 50%, 22%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    padding: 25px;
+    width: 100%;
+    max-width: 440px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.historial-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 15px;
+}
+
+/* TARJETA DE ESTADO MONGO DB (REDISEÑADA Y MAS BONITA) */
+.estado-conexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 10px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    align-self: flex-start;
+}
+
+.punto-estado {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.conectado {
+    background-color: #2ec4b6;
+    box-shadow: 0 0 12px #2ec4b6;
+    animation: pulso 2s infinite;
+}
+
+.desconectado {
+    background-color: #e71d36;
+    box-shadow: 0 0 12px #e71d36;
+}
+
+@keyframes pulso {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 196, 182, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(46, 196, 182, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 196, 182, 0);
+    }
+}
+
+.btn-limpiar {
+    background-color: hsl(0, 75%, 50%);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    align-self: flex-end;
+    transition: background 0.2s;
+}
+
+.btn-limpiar:hover {
+    background-color: hsl(0, 85%, 40%);
+}
+
+#lista-historial {
+    list-style: none;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 380px;
+    padding-right: 5px;
+}
+
+#lista-historial li {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    border-left: 5px solid #2ec4b6;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Fullstack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TÍTULO PRINCIPAL GRANDE -->
+    <header class="app-header">
+        <h1>Calculadora - MongoDB</h1>
+    </header>
+
+    <main class="app-container">
+
+        <!-- SECCIÓN CALCULADORA -->
+        <section class="calculadora">
+            <div class="cabeza">
+                <div class="titulo-seccion">
+                    <!-- Icono de Calculadora -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" />
+                        <line x1="8" y1="6" x2="16" y2="6" />
+                        <line x1="16" y1="14" x2="16" y2="18" />
+                        <path d="M16 10h.01" />
+                        <path d="M12 10h.01" />
+                        <path d="M8 10h.01" />
+                        <path d="M12 14h.01" />
+                        <path d="M8 14h.01" />
+                        <path d="M12 18h.01" />
+                        <path d="M8 18h.01" />
+                    </svg>
+                    <h2>Calculadora</h2>
+                </div>
+                <div class="pantalla">
+                    <span id="pantalla-texto">0</span>
+                </div>
+            </div>
+
+            <div class="teclado">
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn btn-accion" id="DELETE">DEL</button>
+
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">+</button>
+
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">-</button>
+
+                <button class="btn">.</button>
+                <button class="btn">0</button>
+                <button class="btn">/</button>
+                <button class="btn">*</button>
+
+                <button class="btn btn-accion btn-ancho" id="RESET">RESET</button>
+                <button class="btn btn-igual btn-ancho" id="RESULTADO">=</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN HISTORIAL -->
+        <aside class="panel-historial">
+            <div class="historial-header">
+                <div class="titulo-seccion">
+                    <!-- Icono de Historial / Reloj -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <h2>Historial</h2>
+                </div>
+
+                <!-- Tarjeta de Estado MongoDB (Diseño Destacado) -->
+                <div class="estado-conexion" id="estado-conexion">
+                    <span class="punto-estado desconectado" id="punto-estado"></span>
+                    <span id="texto-estado">Buscando BD...</span>
+                </div>
+
+                <button id="btn-limpiar" class="btn-limpiar">Limpiar</button>
+            </div>
+
+            <ul id="lista-historial">
+                <!-- Se llena dinámicamente desde el Backend -->
+            </ul>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
